@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    display: flex;
+    flex-direction: column;
+}
+app-root app-configuracion app-juego app-lista{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    width: 20%;
+}
+button{
+    width: 20%;
+}

@@ -1,0 +1,35 @@
+<p>configuracion works!</p>
+
+<label>Nombre:</label>
+<input type="text" [(ngModel)]="this.nombre"/>
+<br>
+
+<label>Apellido:</label>
+<input type="text" [(ngModel)]="this.apellido"/>
+<br>
+
+<label>Rango de números a generar:</label>
+<input type="text" [(ngModel)]="this.rango"/>
+<br>
+
+<label>Número de intentos:</label>
+<input type="text" [(ngModel)]="this.intentos"/>
+<br>
+
+<button (click)="getDatos()">Recoger datos</button>
+<hr>
+
+<h1>{{this.ongiEtorri}} {{this.nombre}} {{this.apellido}}</h1>
+<label>Introduce número a adivinar:</label>
+<input type="text" [(ngModel)]="this.numero"/>
+<button (click)="juegoAdivinacion()">enviar</button>
+<br>
+<!-- <h2 *ngIf="this.numAleatorio == numero">Has Ganado!</h2> -->
+<h2 *ngIf="this.numAleatorio == numero; else elseBlock">Has Ganado!</h2>
+<ng-template #elseBlock>Intentos restantes: {{this.intentos}}</ng-template>
+<h2 *ngIf="this.intentos == 0">Has Perdido!</h2>
+<ul>
+    <li>
+        {{this.fallos}}
+    </li>
+</ul>
